@@ -11,9 +11,13 @@ class Navbar extends React.Component {
   }
   render() {
     return (
-      <div>
-        <img src={logo} alt='logo' id="brand" />
-        Navbar
+      <div className="nav">
+        <ul>
+          <img src={logo} alt='logo' id="brand" />
+          <li className="services"><a class="active" href="#">Services</a></li>
+          <li className="book"><a href="#">Book</a></li>
+          <li className="about"><a href="#">About</a></li>
+        </ul>
       </div>
     )
   }
