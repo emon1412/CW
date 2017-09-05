@@ -2,7 +2,7 @@ export default [
   {
     name: 'The Express',
     price: {
-      stadard: '$30',
+      standard: '$30',
       large: '$40'
     },
     description: 'Affordable, yet precise. This wash will give your car a clean look in no time',
@@ -15,7 +15,7 @@ export default [
   {
     name: 'The Extended',
     price: {
-      stadard: '$70',
+      standard: '$70',
       large: '$85'
     },
     description: 'Out with the dirty, in with the clean. This wash will give your car a nice swipe on the inside and a cool shine on the outside',
@@ -30,12 +30,12 @@ export default [
   {
     name: 'The Exclusive',
     price: {
-      stadard: '$125',
+      standard: '$125',
       large: '$150'
     },
     description: 'Premium service that will give your car an exceptional look and feel',
     details : [
-      'The Extended +'
+      'The Extended +',
       'Full body paint decontamination',
       'Carnauba Wax (Last about 2-3 months)',
       'Exhaust tip clean (If equipped)',
