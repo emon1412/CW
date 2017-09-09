@@ -5,12 +5,18 @@ class Booking extents React.Component {
     super(props)
 
     this.state = {
-      
+      data: {
+
+      }
     }
   }
   render() {
     return() {
-
+      <div>
+        <input
+          
+        />
+      </div>
     }
   }
 }
