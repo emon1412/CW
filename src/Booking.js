@@ -5,7 +5,8 @@ class Booking extends React.Component {
     super(props)
 
     this.state = {
-      name: ''
+      name: '',
+      email: ''
     }
 
     this.onChange = this.onChange.bind(this)
@@ -24,6 +25,17 @@ class Booking extends React.Component {
         <form>
           <div className="form-group">
             <label className="control-label">Name</label>
+            <input
+              value={this.state.name}
+              onChange={this.onChange}
+              type="text"
+              name="name"
+              className="form-control"
+            />
+          </div>
+
+          <div className="form-group">
+            <label className="control-label">Email</label>
             <input
               value={this.state.name}
               onChange={this.onChange}
