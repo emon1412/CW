@@ -1,4 +1,7 @@
 import React from 'react'
+import { DateField, Calendar } from 'react-date-picker'
+import moment from 'moment'
+import 'react-date-picker/index.css'
 
 class Booking extends React.Component {
   constructor(props) {
@@ -6,15 +9,25 @@ class Booking extends React.Component {
 
     this.state = {
       name: '',
-      email: ''
+      email: '',
+      date: ''
     }
 
     this.onChange = this.onChange.bind(this)
+    this.onDateChange = this.onDateChange.bind(this)
   }
 
   onChange(e) {
     this.setState({
       [e.target.name]: e.target.value
+    })
+    console.log(this.state)
+    console.log(moment().format('YYYY-MM-DD'))
+  }
+
+  onDateChange (dateString, { dateMoment, timestamp }) {
+    this.setState({
+      date: dateString
     })
     console.log(this.state)
   }
@@ -45,6 +58,15 @@ class Booking extends React.Component {
             />
           </div>
 
+          <DateField dateFormat="YYYY-MM-DD">
+
+          <Calendar
+          dateFormat="YYYY-MM-DD"
+          date={moment().format('YYYY-MM-DD')}
+          onChange={this.onDateChange}
+          />
+
+          </DateField>
           <div className="form-group">
             <button className="btn btn-primary btn-large">
               Book
